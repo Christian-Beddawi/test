@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Create directory
+echo "Directory: $1";
+
+# Create file
+echo "File name: $2";
+
+
+echo "Class name: $3"
+
+
+# Create directory
+mkdir /home/christian/$1;
+cd /home/christian/$1/;
+
+# Create file
+touch $2
+
+# Add copyright header to file
+echo "Copyright 2022" >> $2;
+
+# Write a skeleton (public class ClassName{})
+echo "public class $3 {}" >> $2;
+
+# Hint: Search the internet on how to pass arguments to the script and use them
+
+# when you're done, save the file, add the execute permission (chmod +x file.sh), and run it ./file.sh
+
+
+# Optimally, it should be used like this:
+
+# myscript.sh <directory> <filename> <classname>
